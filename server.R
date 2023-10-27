@@ -76,7 +76,7 @@ server <- function(input, output, session) {
     "Economic Growth in the US (2017)" = Set03,
     "ECB zero interest-rate policy (2017) " = Set04,
     "The COVID-19 crisis (2020)" = Set05,
-    "Post-COVID-19 Crisis (2022)" = Set06 )
+    "Post-COVID-19 crisis (2022)" = Set06 )
   
   if (input$x + input$y + input$z  == 100) {
      
@@ -94,12 +94,12 @@ server <- function(input, output, session) {
 # 03.Scenario description ----
 output$scenario <- renderText({
   paste(switch(input$select,
-           "The subprime mortgage crisis (2008)" =  "In the first decade of the 21st century, U.S. banks extended mortgage loans to individuals with low incomes or poor credit histories. These loans were packaged into complex financial instruments and sold to investors around the world. Many of these loans defaulted, leading to significant losses and triggering a global financial crisis in 2008. This scenario is based on US markets. The benchmark is: Short-Term Fixed Income ETF: 20%, Mid-Term Fixed Income ETF: 10%, Stock Market ETF: 70%.",
+           "The subprime mortgage crisis (2008)" =  "In the first decade of the 21st century, US banks extended mortgage loans to individuals with low incomes or poor credit histories. These loans were packaged into complex financial instruments and sold to investors around the world. Many of these loans defaulted, leading to significant losses and triggering a global financial crisis in 2008. This scenario is based on US markets. The benchmark is: Short-Term Fixed Income ETF: 20%, Mid-Term Fixed Income ETF: 10%, Stock Market ETF: 70%.",
            "The European debt crisis (2011)" = "The European sovereign debt crisis was a multi-year financial turmoil that affected several countries in the European Union. It was characterized by escalating levels of government debt, raising concerns about debt sustainability. The crisis led to increased borrowing costs, difficulty in accessing credit markets, and the need for financial assistance. Measures were taken to stabilize the affected economies, including bailout programs and fiscal austerity measures. This scenario is based on EU markets. The benchmark is: Short-Term Fixed Income ETF: 10%, Mid-Term Fixed Income ETF: 10%, Stock Market Index: 80%.",
-           "Economic Growth in the US (2017)" = "During the 2010s, the US economy experienced the longest expansion on record.  Unemployment rates remained at a historic low, with low levels of interest rates and inflation. The stock market witnessed a favorable environment driven by factors such as improved corporate earnings, accommodative monetary policies, and positive investor sentiment. The implementation of pro-business policies, such as tax reforms and deregulation, also played a role in boosting market confidence. This scenario is based on US markets. The benchmark is: Short-Term Fixed Income ETF: 20%, Mid-Term Fixed Income ETF: 20%, Stock Market Index: 60%.",
+           "Economic Growth in the US (2017)" = "During the 2010s, the US economy experienced one of the longest expansions on record. Unemployment rates remained at a historic low, with low levels of interest rates and inflation. The stock market witnessed a favorable environment driven by factors such as improved corporate earnings, accommodative monetary policies, and positive investor sentiment. The implementation of pro-business policies, such as tax reforms and deregulation, also played a role in boosting market confidence. This scenario is based on US markets. The benchmark is: Short-Term Fixed Income ETF: 20%, Mid-Term Fixed Income ETF: 20%, Stock Market Index: 60%.",
            "ECB zero interest-rate policy (2017) " = "Starting in 2016, the ECB kept a zero interest-rate policy (ZIRP) in the Eurozone for many years, while also launching asset purchase programs to support economic growth and prevent deflationary pressures (commonly known as Quantitative Easing). Despite these measures, inflation remained low. This scenario is based on EU markets. The benchmark is: Short-Term Fixed Income ETF: 40%, Mid-Term Fixed Income ETF: 10%, Stock Market Index: 50%.",
-           "The COVID-19 crisis (2020)" = "Amidst the unforeseen pandemic caused by the COVID-19 virus, stock markets experienced one of the largest and fastest declines in modern history. Numerous stocks and indices plummeted, losing more than 30% of their value in a matter of weeks. The stock market crash led many companies to lose large amounts of market value, making them more vulnerable to bankruptcy and takeover. Investors sold their stocks in response to economic uncertainty and declining corporate earnings. To prevent the collapse of the economy, governments and central banks implemented unprecedented stimulus measures to support the affected companies and workers. This scenario is based on US markets. The benchmark is: Short-Term Fixed Income ETF: 15%, Mid-Term Fixed Income ETF: 25%, Stock Market Index: 60%.",
-           "Post-COVID-19 Crisis (2022)" = "After the COVID-19 pandemic shook the world, the global economy came to a near standstill for several months. As a result, stock market prices plummeted rapidly, and long-term bond prices increased due to market uncertainty. The stimulus packages implemented in response to the crisis improved the economic conditions, but fueled rampant inflation that forced the Federal Reserve to approve a series of aggressive interest rates hikes. This scenario is based on US markets. The benchmark is: Short-Term Fixed Income ETF: 50%, Mid-Term Fixed Income ETF: 10%, Stock Market Index: 40%." ))
+           "The COVID-19 crisis (2020)" = "Amidst the unforeseen pandemic caused by the COVID-19 disease, stock markets experienced one of the largest and fastest declines in modern history. Numerous stocks and indices plummeted, losing more than 30% of their value in a matter of weeks. The stock market crash led many companies to lose large amounts of market value, making them more vulnerable to bankruptcy and takeover. Investors sold their stocks in response to economic uncertainty and declining corporate earnings. To prevent the collapse of the economy, governments and central banks implemented unprecedented stimulus measures to support the affected companies and workers. This scenario is based on US markets. The benchmark is: Short-Term Fixed Income ETF: 15%, Mid-Term Fixed Income ETF: 25%, Stock Market Index: 60%.",
+           "Post-COVID-19 crisis (2022)" = "After the COVID-19 pandemic shook the world, the global economy came to a near standstill for several months. As a result, stock market prices plummeted rapidly, and long-term bond prices increased due to market uncertainty. The stimulus packages implemented in response to the crisis improved the economic conditions, but fueled rampant inflation that forced the Federal Reserve to approve a series of aggressive interest rates hikes. This scenario is based on US markets. The benchmark is: Short-Term Fixed Income ETF: 50%, Mid-Term Fixed Income ETF: 10%, Stock Market Index: 40%." ))
      })
 
 
@@ -136,7 +136,7 @@ output$scenario <- renderText({
                      "Economic Growth in the US (2017)" = Set03,
                      "ECB zero interest-rate policy (2017) " = Set04,
                      "The COVID-19 crisis (2020)" = Set05,
-                     "Post-COVID-19 Crisis (2022)" = Set06 )
+                     "Post-COVID-19 crisis (2022)" = Set06 )
         
         b <-switch(input$select,
                    "The subprime mortgage crisis (2008)" = c(20,10,70),
@@ -144,7 +144,7 @@ output$scenario <- renderText({
                    "Economic Growth in the US (2017)" = c(20,20,60),
                    "ECB zero interest-rate policy (2017) " = c(40,10,50),
                    "The COVID-19 crisis (2020)" = c(15,25,60),
-                   "Post-COVID-19 Crisis (2022)" = c(50,10,40) )
+                   "Post-COVID-19 crisis (2022)" = c(50,10,40) )
         benchmark.weights <- b/100
         
         
@@ -231,7 +231,7 @@ output$scenario <- renderText({
                           "Economic Growth in the US (2017)" = Set03[25:(25+rounds),1][[1]],
                           "ECB zero interest-rate policy (2017) " = Set04[25:(25+rounds),1][[1]],
                           "The COVID-19 crisis (2020)" = Set05[25:(25+rounds),1][[1]],
-                          "Post-COVID-19 Crisis (2022)" = Set06[25:(25+rounds),1][[1]] )
+                          "Post-COVID-19 crisis (2022)" = Set06[25:(25+rounds),1][[1]] )
     
     
     min.value <- min(min(y.fund_value), min(y.benchmark_value))-1000
@@ -246,7 +246,7 @@ output$scenario <- renderText({
        xlim = c(0, 12),
        xlab = "Month",
        ylab = "Value",
-       main = "Fund and the Benchmark values",
+       main = "Fund and Benchmark values",
        col = '#4d4dff',
        lwd = 1,
        pch = 16
@@ -285,7 +285,7 @@ output$scenario <- renderText({
                           "Economic Growth in the US (2017)" = Set03[26:(25+rounds),1][[1]],
                           "ECB zero interest-rate policy (2017) " = Set04[26:(25+rounds),1][[1]],
                           "The COVID-19 crisis (2020)" = Set05[26:(25+rounds),1][[1]],
-                          "Post-COVID-19 Crisis (2022)" = Set06[26:(25+rounds),1][[1]] )
+                          "Post-COVID-19 crisis (2022)" = Set06[26:(25+rounds),1][[1]] )
      
     if (current.round==0) {
       x.bar.months <- 0
@@ -339,14 +339,14 @@ output$scenario <- renderText({
                    "Economic Growth in the US (2017)" = Set03[1:25,5][[1]],
                    "ECB zero interest-rate policy (2017) " = Set04[1:25,5][[1]],
                    "The COVID-19 crisis (2020)" = Set05[1:25,5][[1]],
-                   "Post-COVID-19 Crisis (2022)" = Set06[1:25,5][[1]] )
+                   "Post-COVID-19 crisis (2022)" = Set06[1:25,5][[1]] )
       y.cpi <- switch(input$select,
                     "The subprime mortgage crisis (2008)" = Set01[1:25,6][[1]],
                     "The European debt crisis (2011)" = Set02[1:25,6][[1]],
                     "Economic Growth in the US (2017)" = Set03[1:25,6][[1]],
                     "ECB zero interest-rate policy (2017) " = Set04[1:25,6][[1]],
                     "The COVID-19 crisis (2020)" = Set05[1:25,6][[1]],
-                    "Post-COVID-19 Crisis (2022)" = Set06[1:25,6][[1]] )
+                    "Post-COVID-19 crisis (2022)" = Set06[1:25,6][[1]] )
       }
 
     else {                   # data after the first round is played
@@ -361,7 +361,7 @@ output$scenario <- renderText({
              "Economic Growth in the US (2017)" = Set03[1:(25+rounds),1][[1]],
              "ECB zero interest-rate policy (2017) " = Set04[1:(25+rounds),1][[1]],
              "The COVID-19 crisis (2020)" = Set05[1:(25+rounds),1][[1]],
-             "Post-COVID-19 Crisis (2022)" = Set06[1:(25+rounds),1][[1]] )
+             "Post-COVID-19 crisis (2022)" = Set06[1:(25+rounds),1][[1]] )
     
      min.ind.value <- min(-3,min(min(y.ir), min(y.cpi)) - 2.5)
      max.ind.value <- max(7,max(max(y.ir), max(y.cpi)) + 2.5)
@@ -430,7 +430,7 @@ output$scenario <- renderText({
     current.round <- values$current$round
     if(current.round==12) {
       showModal(modalDialog(
-        "Performance Indicators:", 
+        "Performance meaures:", 
         br(),
         br(), "Return of the Fund:", round(values$performance$fund.final.return * 100, digits=2), "%",
         br(), "Volatility of the Fund:", round(values$performance$fund.volatility * 100,digits=2), "%",
@@ -443,7 +443,7 @@ output$scenario <- renderText({
         br(),
         br(), "Information regarding the Benchmark:",
         br(),
-        br(), "The return of the Benchmark:", round(values$performance$benchmark.final.return * 100, digits=2), "%",
+        br(), "Return of the Benchmark:", round(values$performance$benchmark.final.return * 100, digits=2), "%",
         br(), "Volatility of the Benchmark:", round(values$performance$benchmark.volatility * 100,digits=2),"%",
         br(), "Sharpe Ratio of the Benchmark:", round(values$performance$benchmark.sharpe,digits=2), 
         br(), 

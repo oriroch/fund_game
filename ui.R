@@ -15,7 +15,7 @@ fluidRow(
                           "Economic Growth in the US (2017)",
                           "ECB zero interest-rate policy (2017) ",
                           "The COVID-19 crisis (2020)",
-                          "Post-COVID-19 Crisis (2022)"), 
+                          "Post-COVID-19 crisis (2022)"), 
               selected = "The subprime mortgage crisis (2008)" )
     ), 
     wellPanel(
